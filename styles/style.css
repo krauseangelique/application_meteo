@@ -4,4 +4,12 @@ body {
 }
 body h1 {
   color: blue;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 64px;
 }/*# sourceMappingURL=style.css.map */
