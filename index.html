@@ -8,10 +8,56 @@
     <title>Applis Meteo</title>
 </head>
 <body>
-    <h1>Appli Meteo
-    </h1>
-   
-    
+    <h1>Appli Meteo</h1>
+    <!--
+        Au début, on a un tableau HTML pour lequel on insèrera du contenu plus tard grâce à l'aide d'un script JavaScript. Ensuite, on a le template qui décrit la structure du fragment HTML représentant une ligne de tableau.
+    -->
+    <table id="producttable">
+        <thead>
+          <tr>
+            <td>UPC_Code</td>
+            <td>Product_Name</td>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- existing data could optionally be included here -->
+        </tbody>
+    </table>
+    <!-- Ici le template qui nous servira à retourner les infos récupérées en JS -->
+    <template id="productrow">
+        <tr>
+          <td class="record"></td>
+          <td></td>
+        </tr>
+    </template>
+
+    <table id="apiWether">
+        <thead>
+          <tr>
+            <td>Jour et heure</td>
+            <td>Icone du temps</td>
+            <td>Température MAX</td>
+            <td>Température MIN</td>
+            <td>VENT</td>
+            <td>description du temps : </td>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- existing data could optionally be included here -->
+        </tbody>
+    </table>
+
+    <!-- Ici le template qui nous servira à retourner les infos récupérées en JS -->
+    <template id="productrow">
+        <tr>
+          <td class="record"></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+    </template>
+        
 </body>
     <script src="./script.js"></script>
 </html>

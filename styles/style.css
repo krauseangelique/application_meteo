@@ -1,4 +1,10 @@
 body {
   background-color: blanchedalmond;
   color: brown;
+}
+body table {
+  border: 1px solid rgb(221, 53, 53);
+}
+body table thead {
+  font-weight: 900;
 }/*# sourceMappingURL=style.css.map */
