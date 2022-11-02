@@ -16,6 +16,7 @@ console.log("Hello Word");
  */
 const latLiege = 50.6333;
 const lonLiege = 5.56667;
+
 const lang = "fr";
 const counter = 7;
 
