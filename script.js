@@ -48,6 +48,7 @@ if ("content" in document.createElement("template")) {
 
   // On clone la ligne et on l'insère dans le tableau
   var tbody = document.querySelector("tbody");
+  
   var clone = document.importNode(template.content, true);
   var td = clone.querySelectorAll("td");
   td[0].textContent = "1235646565";
@@ -68,4 +69,55 @@ if ("content" in document.createElement("template")) {
   // Une autre méthode pour ajouter les lignes
   // car l'élément HTML n'est pas pris en charge.
   console.error('le navigateur ne prend pas en charge l\'élément HTML template');
+}
+
+// ----- Exemple avec Weather
+ 
+if ("content" in document.createElement("template")) {
+
+  // On prépare une ligne pour le tableau
+  var template = document.querySelector("#productweather");
+
+  // On clone la ligne et on l'insère dans le tableau
+  var tbody = document.querySelector("tbody");
+
+  var clone = document.importNode(template.content, true);
+  var td = clone.querySelectorAll("td");
+  td[0].textContent = "${list.dt_txt}";
+  td[1].textContent = "${list.weather.icon}";
+  td[2].textContent = "MAX ${list.main.temp_max}";
+  td[3].textContent = "MIN ${list.main.temp_min}";
+  td[4].textContent = "VENT ${list.wind.speed}";
+  td[5].textContent = "${list.weather.description}";
+
+  tbody.appendChild(clone);
+
+  // On fait de même pour une autre ligne
+  var clone2 = document.importNode(template.content, true);
+  td = clone2.querySelectorAll("td");
+  td[0].textContent = "0384928528";
+  td[1].textContent = "Acme Kidney Beans";
+
+  // Puis on insère
+  tbody.appendChild(clone2);
+
+} else {
+  // Une autre méthode pour ajouter les lignes
+  // car l'élément HTML n'est pas pris en charge.
+  console.error('le navigateur ne prend pas en charge l\'élément HTML template');
+}
+
+
+// --------
+
+async function displayDatas() {
+  const calls = (await fetchingDatas()) || [];
+  const callList = calls.list;
+  callList.forEach((call) => {
+    const templateElement = document.importNode(
+      document.querySelector("template").content,true
+    );
+    templateElement.get
+
+  })
 }
