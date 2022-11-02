@@ -27,3 +27,9 @@ const counter = 7;
  // API Call
  const weatherUrl = `api.openweathermap.org/data/2.5/forecast?units=metric&lat=${latLiege}&lon=${lonLiege}&appid=${apiKey}&lang=${lang}&cnt=${counter}`;
 console.log(weatherUrl);
+// fetch
+fetch(weatherUrl)
+  .then((response) => response.json())
+  .then((response) => {
+    console.log(response);
+  });
