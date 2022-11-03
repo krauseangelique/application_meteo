@@ -140,6 +140,14 @@ async function displayDatas() {
         true
       );
       // .textContent ???
+      /*
+      const element = document.getElementById('does-not-exist');
+      console.log(element); // 👉️ null
+
+      // ⛔️ Cannot set properties of null (setting 'textContent')
+      element.textContent = 'some content';
+      An element with the provided id doesn't exist, so the getElementById method returns a null value. 
+      */
       templateElement.getElementById("date").textContent = call.dt_txt;
       document.querySelector("main").appendChild(templateElement);
     });
