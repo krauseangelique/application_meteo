@@ -8,10 +8,13 @@
     <title>Applis Meteo</title>
 </head>
 <body>
-    <h1>Appli Meteo</h1>
+   
     <!--
         Au début, on a un tableau HTML pour lequel on insèrera du contenu plus tard grâce à l'aide d'un script JavaScript. Ensuite, on a le template qui décrit la structure du fragment HTML représentant une ligne de tableau.
     -->
+    <header>
+       <h1>Appli Meteo</h1>
+    </header>
     <table id="producttable">
         <thead>
           <tr>
@@ -30,9 +33,23 @@
           <td></td>
         </tr>
     </template>
-
+    
     <!-- Idem avec l'api Weather -->
-    <table id="producttable">
+    <!-- Ici le template qui nous servira à retourner les infos récupérées en JS -->
+    <template id="meteo">
+      <p id="date">Date</p>
+      <img src="" alt="">
+      <p id="maxTemp">Max temp</p>
+      <p id="minTemp">Min temp</p>
+      <p id="winSpeed">Wind Speed</p>
+      <p id="description">Description</p>
+   </template>
+
+   <main class="container">
+    <!-- existing data could optionally be included here -->
+   </main>
+
+    <!-- <table id="producttable"> 
         <thead>
           <tr>
             <td class=""></td>
@@ -43,10 +60,10 @@
           </tr>
         </thead>
         <tbody>
-          <!-- existing data could optionally be included here -->
+          -- existing data could optionally be included here --
         </tbody>
     </table>
-
+  -->
     <!--    
     <p id="date"></p>
     <img src="" alt="">
@@ -56,13 +73,9 @@
     <p id="description"></p>
     -->
 
-
-
     <!-- Ici le template qui nous servira à retourner les infos récupérées en JS -->
-    <template id="productweather">
-       
-       
-    </template>
+    <!-- <template id="productweather"> -->
+    <!-- </template> -->
         
 </body>
     <script src="./script.js"></script>
