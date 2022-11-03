@@ -115,6 +115,7 @@ if ("content" in document.createElement("template")) {
 //function fetchingDatas
 function fetchingDatas(){
   return fetch(weatherUrl).then((response) => {
+
     if(response.status >= 200 && response.status < 300){
       return response.json();
     } else {
@@ -123,6 +124,7 @@ function fetchingDatas(){
         throw new Error("Something went wrong - server-side");
       });
     }
+    
   });
 }
 
@@ -130,13 +132,18 @@ function fetchingDatas(){
 async function displayDatas() {
   const calls = (await fetchingDatas()) || [];
   const callList = calls.list;
-  callList.forEach((call) => {
-    const templateElement = document.importNode(
-      document.querySelector("template").content,true
-    );
-    templateElement.getElementById("date").textContent = call.dt_txt;
-    document.querySelector("main").appendChild(templateElement);
-  });
+
+    // pour chaque demande à l'API
+    callList.forEach((call) => {
+      const templateElement = document.importNode(
+        document.querySelector("template").content,
+        true
+      );
+      // .textContent ???
+      templateElement.getElementById("date").textContent = call.dt_txt;
+      document.querySelector("main").appendChild(templateElement);
+    });
+
 }
-// ????
+// Appel de fonction
 displayDatas();
