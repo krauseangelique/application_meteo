@@ -8,6 +8,7 @@ body table {
 }
 body table thead {
   font-weight: 900;
+  font-style: oblique;
   padding: 10px;
   border: 1px solid green;
   margin: 10px;
